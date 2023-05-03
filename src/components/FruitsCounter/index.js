@@ -1,29 +1,29 @@
+/* eslint-disable lines-between-class-members */
+/* eslint-disable no-unused-vars */
 import {Component} from 'react'
 
 import './index.css'
 
 class FruitsCounter extends Component {
-  state = {mangoesCount: 4}
-  state = {bananasCount: 5}
+  state = {mangoesCount: 4, bananasCount: 5}
 
   onClickEatBanana = () => {
-    const {bananasCount} = this.state;
-    // console.log(bananasCount); 
-  };
+    const {bananasCount} = this.state
+    // console.log(bananasCount);
 
-    this.setState(prevState => ({bananasCount: prevState.bananasCount + 1}));
-  };
+    this.setState(prevState => ({bananasCount: prevState.bananasCount + 1}))
+  }
 
   onClickEatMango = () => {
-    const {mangoesCount} = this.state;
-    // console.log(mangoesCount); 
-  };
-    this.setState(prevState => ({mangoesCount: prevState.mangoesCount + 1}));
-  };
+    const {mangoesCount} = this.state
+    // console.log(mangoesCount);
 
-  render() { 
-    return ( 
-       const FruitsCounter = () => (
+    this.setState(prevState => ({mangoesCount: prevState.mangoesCount + 1}))
+  }
+
+  render() {
+    const {mangoesCount, bananasCount} = this.state
+    return (
       <div className="app-container">
         <div className="fruits-counter">
           <h1 className="count-text">
@@ -34,11 +34,17 @@ class FruitsCounter extends Component {
             <div className="counter-control">
               <img
                 src="https://assets.ccbp.in/frontend/react-js/mango-img.png"
-                alt="banana"
+                alt="mango"
                 className="fruit-image"
               />
               <div className="button-container">
-                <button type="button" className ="button" onClick={this.onClickEatMango}> Eat Mango </button>
+                <button
+                  type="button"
+                  className="button"
+                  onClick={this.onClickEatMango}
+                >
+                  Eat Mango
+                </button>
               </div>
             </div>
             <div className="counter-control">
@@ -48,13 +54,18 @@ class FruitsCounter extends Component {
                 className="fruit-image"
               />
               <div className="button-container">
-                <button type="button" className="button" onClick={this.onClickEatBanana}>Eat Banana</button>
+                <button
+                  type="button"
+                  className="button"
+                  onClick={this.onClickEatBanana}
+                >
+                  Eat Banana
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )
     )
   }
 }
